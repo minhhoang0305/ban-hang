@@ -16,6 +16,7 @@
 
 <body>
     <?php
+    ob_start();
     session_start();
     include("admincp/config/connect.php");
     include("pages/menu.php"); // Di chuyển menu.php lên đây
