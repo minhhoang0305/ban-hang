@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+
+require_once __DIR__ . "/admincp/config/connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,21 +22,15 @@
 
 <body>
     <?php
-    ob_start();
-    session_start();
-    include("admincp/config/connect.php");
-    include("pages/menu.php"); // Di chuyển menu.php lên đây
+    require __DIR__ . "/pages/menu.php";
     ?>
 
     <div class="wrapper">
         <?php
-        include("pages/main.php");
-        include("pages/footer.php");
+        require __DIR__ . "/pages/main.php";
+        require __DIR__ . "/pages/footer.php";
         ?>
     </div>
-
-
-
 </body>
 
 </html>
